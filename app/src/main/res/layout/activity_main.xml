@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+
+    <!--    add a name attribute and set it to androidx.navigation.fragment.NavHostFragment.
+            setting it to NavHostFragment allows your FragmentContainerView to navigate between fragments.-->
+
+    <!--    add an attribute called app:defaultNavHost and set it equal to "true".
+            This allows the fragment container to interact with the navigation hierarchy.
+            For example, if the system back button is pressed, then the container will navigate back to the
+            previously shown fragment, just like what happens when a new activity is presented. -->
+
+    <!--    an attribute called app:navGraph and set it equal to "@navigation/nav_graph".
+            This points to an XML file that defines how your app's fragments can navigate to one another.-->
+
+    <!--    In order to make NavGraph work you must :
+            Add a navigation graph file (File > New > Android Resource File) and filling the fields as follows.
+            File name: nav_graph.xml. This is the same as the name you set for the app:navGraph attribute.
+            Resource type: Navigation. The Directory name should then automatically change to navigation.
+            A new resource folder called "navigation" will be created. -->
+
+
+</FrameLayout>
+
